@@ -1,6 +1,7 @@
 # PDF Direct
 
-Firefox extension to skip journals' "enhanced" PDF viewers to direct PDF downloads. Currently works with Sage journals. Submit an issue if you want me to add a provider / feature / squash a bug.
+Firefox extension to skip journals' "enhanced" PDF viewers to direct PDF downloads. Currently works with Sage and Wiley journals. 
+
 
 ## Example
 
@@ -19,6 +20,10 @@ Firefox extension to skip journals' "enhanced" PDF viewers to direct PDF downloa
 5. Select `manifest.json` from downloaded files
 
 I'll add an easier install method later.
+
+## Suggestions
+
+Submit an issue if you want me to add a provider / feature / squash a bug.
 
 ## License
 

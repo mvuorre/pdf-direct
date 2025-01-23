@@ -4,12 +4,17 @@ browser.webRequest.onBeforeRequest.addListener(
       return {
         redirectUrl: details.url.replace(/(\/reader\/|\/full\/)/, "/pdf/") + "?download=true"
       };
+    } else if (details.url.includes("/doi/epdf/")) {
+      return {
+        redirectUrl: details.url.replace("/doi/epdf/", "/doi/pdfdirect/") + "?download=true"
+      };
     }
   },
   {
     urls: [
       "*://*.sagepub.com/doi/reader/*",
-      "*://*.sagepub.com/doi/full/*"
+      "*://*.sagepub.com/doi/full/*",
+      "*://*.wiley.com/doi/epdf/*"
     ]
   },
   ["blocking"]

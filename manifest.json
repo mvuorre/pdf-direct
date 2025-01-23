@@ -6,7 +6,8 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://*.sagepub.com/*"
+    "*://*.sagepub.com/*",
+    "*://*.wiley.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
