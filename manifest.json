@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Direct PDF Download",
+  "version": "1.0",
+  "description": "Redirects journal PDF viewers to direct downloads",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.sagepub.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
