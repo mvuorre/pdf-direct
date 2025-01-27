@@ -28,22 +28,16 @@ MIT
 
 ## Development
 
-Requirements:
+Requirements
+
 - `web-ext` (`npm install -g web-ext`)
 - `gh` CLI (`brew install gh`)
 - `jq` (`brew install jq`)
 
-Install for source as a temporary add-on for development and testing:
-
-1. Download/clone <https://github.com/mvuorre/pdf-direct>
-2. Open Firefox, go to `about:debugging`
-3. Click "This Firefox"
-4. Click "Load Temporary Add-on"
-5. Select `manifest.json` from downloaded files
-
 Build and publish extension
 
-1. Test extension manually: `make test`
-2. Lint extension: `make lint`
-3. Increment version in `manifest.json`
-4. Create release: `make release`
+1. Download/clone <https://github.com/mvuorre/pdf-direct>
+2. Test extension manually: `make test`
+3. Lint extension: `make lint`
+4. Increment version in `manifest.json`
+5. Create release: `make release`
