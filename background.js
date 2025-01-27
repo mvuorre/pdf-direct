@@ -6,7 +6,7 @@ browser.webRequest.onBeforeRequest.addListener(
       };
     } else if (details.url.includes("/doi/epdf/")) {
       return {
-        redirectUrl: details.url.replace("/doi/epdf/", "/doi/pdfdirect/") + "?download=true"
+        redirectUrl: details.url.replace("/doi/epdf/", "/doi/pdf/") + "?download=true"
       };
     }
   },
@@ -14,7 +14,8 @@ browser.webRequest.onBeforeRequest.addListener(
     urls: [
       "*://*.sagepub.com/doi/reader/*",
       "*://*.sagepub.com/doi/full/*",
-      "*://*.wiley.com/doi/epdf/*"
+      "*://*.wiley.com/doi/epdf/*",
+      "*://*.tandfonline.com/doi/epdf/*"
     ]
   },
   ["blocking"]

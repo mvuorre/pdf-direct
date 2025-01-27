@@ -1,13 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Direct PDF Download",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Redirects journal PDF viewers to direct downloads",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
     "*://*.sagepub.com/*",
-    "*://*.wiley.com/*"
+    "*://*.wiley.com/*",
+    "*://*.tandfonline.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
