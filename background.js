@@ -1,21 +1,27 @@
 browser.webRequest.onBeforeRequest.addListener(
   function(details) {
-    if (details.url.includes("/reader/") || details.url.includes("/doi/full/")) {
-      return {
-        redirectUrl: details.url.replace(/(\/reader\/|\/full\/)/, "/pdf/") + "?download=true"
-      };
-    } else if (details.url.includes("/doi/epdf/")) {
-      return {
-        redirectUrl: details.url.replace("/doi/epdf/", "/doi/pdf/") + "?download=true"
-      };
+    console.log("Processing URL:", details.url);
+    
+    // Handle direct reader URLs
+    if (details.url.includes("/doi/reader/")) {
+      const redirectUrl = details.url.replace("/doi/reader/", "/doi/pdf/") + "?download=true";
+      console.log("Redirecting reader URL to:", redirectUrl);
+      return { redirectUrl };
+    }
+    
+    // Handle epdf URLs
+    if (details.url.includes("/doi/epdf/")) {
+      const redirectUrl = details.url.replace("/doi/epdf/", "/doi/pdf/") + "?download=true";
+      console.log("Redirecting epdf URL to:", redirectUrl);
+      return { redirectUrl };
     }
   },
   {
     urls: [
-      "*://*.sagepub.com/doi/reader/*",
-      "*://*.sagepub.com/doi/full/*",
-      "*://*.wiley.com/doi/epdf/*",
-      "*://*.tandfonline.com/doi/epdf/*"
+      "*://*.royalsocietypublishing.org/*",
+      "*://*.sagepub.com/*",
+      "*://*.tandfonline.com/*",
+      "*://*.wiley.com/*"
     ]
   },
   ["blocking"]

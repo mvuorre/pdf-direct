@@ -2,7 +2,7 @@ VERSION := $(shell jq -r .version manifest.json)
 ZIP_FILE := web-ext-artifacts/direct_pdf_download-$(VERSION).zip
 
 test: manifest.json
-	web-ext run
+	web-ext run --verbose
 
 lint: manifest.json
 	web-ext lint
