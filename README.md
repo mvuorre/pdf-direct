@@ -42,3 +42,7 @@ Build and publish extension
 3. Lint extension: `make lint`
 4. Increment version in `manifest.json`
 5. Create release: `make release`
+
+## Credits
+
+Icons: [Pdf icons created by El-Faza Stuff - Flaticon](https://www.flaticon.com/free-icons/pdf)

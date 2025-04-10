@@ -1,4 +1,7 @@
 {
+  "name": {
+    "en-US": "PDF-Direct"
+  },
   "summary": {
     "en-US": "Redirects academic journal fancy PDF viewers to direct file downloads."
   },

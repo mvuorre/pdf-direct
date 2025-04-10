@@ -1,6 +1,8 @@
 VERSION := $(shell jq -r .version manifest.json)
 ZIP_FILE := web-ext-artifacts/direct_pdf_download-$(VERSION).zip
 
+include .env
+
 test: manifest.json
 	web-ext run --verbose
 
