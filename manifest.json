@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Direct PDF Download",
   "version": "1.2",
-  "description": "Redirects journal PDF viewers to direct downloads",
+  "description": "Redirects academic journal fancy PDF viewers to direct file downloads.",
   "permissions": [
     "webRequest",
     "webRequestBlocking",

@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "en-US": "Redirects academic journal fancy PDF viewers to direct file downloads."
+  },
+  "categories": [
+    "other"
+  ],
+  "version": {
+    "license": "MIT"
+  }
+}

@@ -2,9 +2,10 @@
 
 Firefox extension to skip journals' "enhanced" PDF viewers to direct PDF downloads. Currently works with 
 
+- Royal Society
 - Sage 
-- Wiley
 - Taylor and Francis
+- Wiley
 
 ## Install 
 

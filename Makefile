@@ -17,3 +17,9 @@ release: lint build
 		--title "v$(VERSION)" \
 		--notes "Release v$(VERSION)" \
 		"$(ZIP_FILE)"
+
+sign:
+	web-ext sign --channel="listed" \
+		--api-key="$(API_KEY)" \
+		--api-secret="$(API_SECRET)" \
+		--amo-metadata="metadata.json"
