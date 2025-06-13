@@ -10,7 +10,7 @@ lint: manifest.json
 	web-ext lint
 
 build: manifest.json background.js
-	web-ext build --ignore-files="*.gif" README.md --overwrite-dest
+	web-ext build --ignore-files="*.gif" README.md Makefile --overwrite-dest
 
 release: lint build
 	git tag -a "v$(VERSION)" -m "Release v$(VERSION)"
