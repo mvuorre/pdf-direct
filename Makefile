@@ -10,7 +10,7 @@ lint: manifest.json
 	web-ext lint
 
 build: manifest.json background.js
-	web-ext build --ignore-files="*.gif" README.md Makefile --overwrite-dest
+	web-ext build --ignore-files="*.gif" README.md Makefile metadata.json --overwrite-dest
 
 release: lint build
 	git tag -a "v$(VERSION)" -m "Release v$(VERSION)"
@@ -20,7 +20,7 @@ release: lint build
 		--notes "Release v$(VERSION)" \
 		"$(ZIP_FILE)"
 
-sign:
+sign: build
 	web-ext sign --channel="listed" \
 		--api-key="$(API_KEY)" \
 		--api-secret="$(API_SECRET)" \
