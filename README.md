@@ -1,11 +1,29 @@
 # PDF Direct
 
-Firefox extension to skip journals' "enhanced" PDF viewers to direct PDF downloads. Currently works with 
+Firefox extension to skip academic journals' "enhanced" PDF viewers to direct PDF downloads. 
 
-- Royal Society
-- Sage 
-- Taylor and Francis
-- Wiley
+## Supported Publishers
+
+The extension works with major academic publishers and their university proxy versions:
+
+- **American Chemical Society** (ACS)
+- **Cambridge University Press** 
+- **Elsevier** (ScienceDirect)
+- **IEEE** (Institute of Electrical and Electronics Engineers)
+- **JSTOR** (Academic archives)
+- **Nature Publishing Group**
+- **Oxford University Press**
+- **PLOS** (Public Library of Science)
+- **Royal Society Publishing**
+- **Sage Publications**
+- **Springer Nature**
+- **Taylor & Francis**
+- **Wiley**
+
+The extension automatically works with:
+- Direct publisher websites (e.g., `journals.sagepub.com`)
+- University proxy services (e.g., `journals-sagepub-com.university.edu`)
+- OCLC WorldCat proxies (e.g., `journals-sagepub-com.university.idm.oclc.org`)
 
 ## Install 
 
@@ -17,11 +35,21 @@ Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>
 | --- | --- |
 | ![With Extension](with.gif) | ![Without Extension](without.gif) |
 
-`/doi/reader/10.1177/0956797621989724` → `/doi/pdf/10.1177/0956797621989724?download=true` instead of `/doi/epub/10.1177/0956797621989724`
+`/doi/reader/10.1177/0956797621989724` → `/doi/pdf/10.1177/0956797621989724` instead of `/doi/epub/10.1177/0956797621989724`
+
+## How It Works
+
+The extension intercepts requests to academic journal "enhanced" PDF viewers and redirects them to direct PDF downloads by converting:
+
+- `/doi/reader/` → `/doi/pdf/`
+- `/doi/epdf/` → `/doi/pdf/`  
+- `/doi/epub/` → `/doi/pdf/`
+
+This works across both direct publisher domains and university proxy services.
 
 ## Suggestions
 
-Submit an issue if you want me to add a provider / feature / squash a bug.
+Submit an issue if you want me to add a publisher / feature / squash a bug.
 
 ## License
 

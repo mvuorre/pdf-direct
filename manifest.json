@@ -6,10 +6,32 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "*://*.acs.org/*",
+    "*://*-acs-org.*/*",
+    "*://*.cambridge.org/*",
+    "*://*-cambridge-org.*/*",
+    "*://*.ieee.org/*",
+    "*://*-ieee-org.*/*",
+    "*://*.jstor.org/*",
+    "*://*-jstor-org.*/*",
+    "*://*.nature.com/*",
+    "*://*-nature-com.*/*",
+    "*://*.oup.com/*",
+    "*://*-oup-com.*/*",
+    "*://*.plos.org/*",
+    "*://*-plos-org.*/*",
     "*://*.royalsocietypublishing.org/*",
+    "*://*-royalsocietypublishing-org.*/*",
     "*://*.sagepub.com/*",
+    "*://*-sagepub-com.*/*",
+    "*://*.sciencedirect.com/*",
+    "*://*-sciencedirect-com.*/*",
+    "*://*.springer.com/*",
+    "*://*-springer-com.*/*",
     "*://*.tandfonline.com/*",
-    "*://*.wiley.com/*"
+    "*://*-tandfonline-com.*/*",
+    "*://*.wiley.com/*",
+    "*://*-wiley-com.*/*"
   ],
   "background": {
     "scripts": ["background.js"]
