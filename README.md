@@ -1,8 +1,8 @@
 # PDF Direct
 
-Firefox extension to skip academic journals' "enhanced" PDF viewers to direct PDF downloads. 
+Firefox extension to skip academic journals' "enhanced" PDF viewers to direct PDF downloads.
 
-## Install 
+## Install
 
 Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>.
 
@@ -17,13 +17,14 @@ Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>.
 The extension works with major academic publishers and their university proxy versions:
 
 - **American Chemical Society** (ACS)
-- **Cambridge University Press** 
+- **Cambridge University Press**
 - **Elsevier** (ScienceDirect)
 - **IEEE** (Institute of Electrical and Electronics Engineers)
 - **JSTOR** (Academic archives)
 - **Nature Publishing Group**
 - **Oxford University Press**
 - **PLOS** (Public Library of Science)
+- **PNAS**
 - **Royal Society Publishing**
 - **Sage Publications**
 - **Springer Nature**
@@ -39,7 +40,7 @@ The extension automatically works with:
 The extension intercepts requests to academic journal "enhanced" PDF viewers and redirects them to direct PDF downloads by converting:
 
 - `/doi/reader/` → `/doi/pdf/`
-- `/doi/epdf/` → `/doi/pdf/`  
+- `/doi/epdf/` → `/doi/pdf/`
 - `/doi/epub/` → `/doi/pdf/`
 
 This works across both direct publisher domains and proxy services.
