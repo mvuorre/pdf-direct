@@ -1,4 +1,4 @@
-# PDF Direct
+# PDF-Direct
 
 Firefox extension to skip academic journals' "enhanced" PDF viewers to direct PDF downloads.
 
