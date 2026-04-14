@@ -1,5 +1,6 @@
 VERSION := $(shell jq -r .version manifest.json)
-ZIP_FILE := web-ext-artifacts/direct_pdf_download-$(VERSION).zip
+PACKAGE_FILE := pdf-direct-$(VERSION).zip
+ZIP_FILE := web-ext-artifacts/$(PACKAGE_FILE)
 
 include .env
 
@@ -10,11 +11,13 @@ lint: manifest.json
 	web-ext lint
 
 build: manifest.json background.js
-	web-ext build --ignore-files="*.gif" README.md Makefile metadata.json --overwrite-dest
+	web-ext build --filename="$(PACKAGE_FILE)" --ignore-files="*.gif" README.md Makefile metadata.json --overwrite-dest
 
 release: lint build
-	git tag -a "v$(VERSION)" -m "Release v$(VERSION)"
-	git push && git push --tags
+	git tag -f -a "v$(VERSION)" -m "Release v$(VERSION)"
+	git push
+	git push --force origin "refs/tags/v$(VERSION)"
+	-gh release delete "v$(VERSION)" --yes
 	gh release create "v$(VERSION)" \
 		--title "v$(VERSION)" \
 		--notes "Release v$(VERSION)" \
