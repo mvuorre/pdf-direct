@@ -16,6 +16,7 @@ Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>.
 
 The extension works with major academic publishers and their university proxy versions:
 
+- **ACM** (Association for Computing Machinery)
 - **American Chemical Society** (ACS)
 - **Cambridge University Press**
 - **Elsevier** (ScienceDirect)
@@ -27,6 +28,7 @@ The extension works with major academic publishers and their university proxy ve
 - **PNAS**
 - **Royal Society Publishing**
 - **Sage Publications**
+- **Science** (AAAS)
 - **Springer Nature**
 - **Taylor & Francis**
 - **Wiley**

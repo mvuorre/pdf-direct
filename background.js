@@ -28,6 +28,7 @@ browser.webRequest.onBeforeRequest.addListener(
   },
   {
     urls: [
+      "*://*.acm.org/*",
       "*://*.acs.org/*",
       "*://*.cambridge.org/*",
       "*://*.ieee.org/*",
@@ -38,6 +39,7 @@ browser.webRequest.onBeforeRequest.addListener(
       "*://*.pnas.org/*",
       "*://*.royalsocietypublishing.org/*",
       "*://*.sagepub.com/*",
+      "*://*.science.org/*",
       "*://*.sciencedirect.com/*",
       "*://*.springer.com/*",
       "*://*.tandfonline.com/*",

@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
   "name": "Direct PDF Download",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Redirects academic journal fancy PDF viewers to direct file downloads.",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "*://*.acm.org/*",
     "*://*.acs.org/*",
     "*://*.cambridge.org/*",
     "*://*.ieee.org/*",
@@ -16,6 +17,7 @@
     "*://*.pnas.org/*",
     "*://*.royalsocietypublishing.org/*",
     "*://*.sagepub.com/*",
+    "*://*.science.org/*",
     "*://*.sciencedirect.com/*",
     "*://*.springer.com/*",
     "*://*.tandfonline.com/*",
