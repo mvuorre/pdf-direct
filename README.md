@@ -14,7 +14,7 @@ Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>.
 
 ## Supported Publishers
 
-The extension works with major academic publishers and their university proxy versions:
+The extension works with major academic publishers:
 
 - **ACM** (Association for Computing Machinery)
 - **ACS** (American Chemical Society)
@@ -35,7 +35,9 @@ The extension works with major academic publishers and their university proxy ve
 
 The extension automatically works with:
 - Direct publisher websites (e.g., `journals.sagepub.com`)
-- OCLC WorldCat proxies (e.g., `journals-sagepub-com.university.idm.oclc.org`)
+- Some OCLC-hosted proxy URLs under `*.oclc.org` (e.g., `journals-sagepub-com.university.idm.oclc.org`)
+
+Institution proxy URLs vary a lot, so support cannot be inferred generically. If your library proxy is not handled, please open an issue with an example URL.
 
 ## How It Works
 
@@ -45,7 +47,7 @@ The extension intercepts requests to academic journal "enhanced" PDF viewers and
 - `/doi/epdf/` → `/doi/pdf/`
 - `/doi/epub/` → `/doi/pdf/`
 
-This works across both direct publisher domains and proxy services.
+This works across direct publisher domains and some proxy-hosted URLs.
 
 ## License
 
