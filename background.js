@@ -60,6 +60,7 @@ browser.webRequest.onBeforeRequest.addListener(
       "*://*.springer.com/*",
       "*://*.tandfonline.com/*",
       "*://*.wiley.com/*",
+      "*://*.ebsco.com/*",
       "*://*.oclc.org/*"
     ]
   },

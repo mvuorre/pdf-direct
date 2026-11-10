@@ -22,6 +22,7 @@
     "*://*.springer.com/*",
     "*://*.tandfonline.com/*",
     "*://*.wiley.com/*",
+    "*://*.ebsco.com/*",
     "*://*.oclc.org/*"
   ],
   "background": {
