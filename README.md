@@ -12,28 +12,11 @@ Get the add-on at <https://addons.mozilla.org/addon/pdf-direct/>.
 | --- | --- |
 | ![With Extension](with.gif) | ![Without Extension](without.gif) |
 
-## Supported Publishers
+## Supported Publishers / platforms
 
-The extension works with major academic publishers:
+The extension works with major academic publishers, see the URLs in `permissions` in manifest.json for full list, feel free to suggest others.
 
-- **ACM** (Association for Computing Machinery)
-- **ACS** (American Chemical Society)
-- **Cambridge University Press**
-- **Elsevier** (ScienceDirect)
-- **IEEE**
-- **JSTOR**
-- **Nature Publishing Group**
-- **Oxford University Press**
-- **PLOS**
-- **PNAS**
-- **Royal Society Publishing**
-- **Sage Publications**
-- **Science**
-- **Springer Nature**
-- **Taylor & Francis**
-- **Wiley**
-
-The extension automatically works with:
+The extension should work with:
 - Direct publisher websites (e.g., `journals.sagepub.com`)
 - Some OCLC-hosted proxy URLs under `*.oclc.org` (e.g., `journals-sagepub-com.university.idm.oclc.org`)
 
