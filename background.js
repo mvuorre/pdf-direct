@@ -4,9 +4,25 @@
 // URL Pattern Strategy:
 // - Direct publisher domains: *.publisher.com
 // - Known proxy services: *.oclc.org
+// - Regex for Ebscohost
 
 browser.webRequest.onBeforeRequest.addListener(
   function(details) {
+
+    // Handle EBSCOhost viewer URLs
+    const ebscoMatch = details.url.match(
+      /^(https?:\/\/[^/]+)\/c\/([^/]+)\/viewer\/pdf\/([^/?]+)/
+    );
+
+    if (ebscoMatch) {
+      const [, origin, opid, sourceRecordId] = ebscoMatch;
+
+      const redirectUrl =
+        `${origin}/api/search/v1/record/${sourceRecordId}/fulltext/pdf` +
+        `?sourceRecordId=${sourceRecordId}&opid=${opid}&intent=download`;
+
+      return { redirectUrl };
+    }
 
     // Handle direct reader URLs
     if (details.url.includes("/doi/reader/")) {
@@ -44,6 +60,7 @@ browser.webRequest.onBeforeRequest.addListener(
       "*://*.springer.com/*",
       "*://*.tandfonline.com/*",
       "*://*.wiley.com/*",
+      "*://*.ebsco.com/*",
       "*://*.oclc.org/*"
     ]
   },
