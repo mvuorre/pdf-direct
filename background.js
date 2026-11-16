@@ -53,6 +53,7 @@ browser.webRequest.onBeforeRequest.addListener(
       "*://*.oup.com/*",
       "*://*.plos.org/*",
       "*://*.pnas.org/*",
+      "*://*.pubsonline.informs.org/*",
       "*://*.royalsocietypublishing.org/*",
       "*://*.sagepub.com/*",
       "*://*.science.org/*",
